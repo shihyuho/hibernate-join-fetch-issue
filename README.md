@@ -1,10 +1,12 @@
 # Hibernate Join, Fetch Issue
 
+## 相關 Cases
+
 - [HHH-17629](https://hibernate.atlassian.net/browse/HHH-17629): Criteria and Entity graph generates same join clause twice
 - [HHH-18378](https://hibernate.atlassian.net/browse/HHH-18378): Avoid reusing existing joins for entity-graph fetches if they're included in the where clause
 - [HHH-19095](https://hibernate.atlassian.net/browse/HHH-19095): Re-use existing compatible joins for fetch if not used in where clause (此為優化建議, 尚未實作)
 
-## 測試 Cases
+## 測試案例
 
 1. [同時呼叫 join 及 fetch, 但 where 條件至多一個](./src/test/java/com/example/JoinAndFetchWithSingleClauseTest.java)
 2. [同時呼叫 join 及 fetch, 但指定兩個 where 條件](./src/test/java/com/example/JoinAndFetchWithMultiClauseTest.java)
